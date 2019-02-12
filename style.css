@@ -3,7 +3,7 @@
 /*===================*/
  
 
-:root {--main-color: #074b1f;}
+:root {--main-color: #025821;}
 
 * {
     margin: 0;
@@ -25,7 +25,7 @@ html, body {
 h1 {
     font-weight: 200;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     font-size: 3.5rem;
     word-spacing: 6px;
     letter-spacing: 2px;
@@ -38,10 +38,17 @@ h1 {
 
 
 .header {
-    grid-column: 1/-1;
-    text-align: center;
-    
+    display: grid;
+    grid-template-columns: 1fr 18fr 1fr;
+    grid-template-areas:
+        ". title ."
+        ". descr .";
 }
+
+.title {grid-area: title;} 
+.desc  {grid-area: descr;}
+.title, .desc {text-align: center;}
+
 .gallery-wrapper {
     margin: 60px 0;
     display: grid;
